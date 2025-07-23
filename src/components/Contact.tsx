@@ -78,108 +78,139 @@ const Contact: React.FC = () => {
     }
   };
    
-  return (
-    <React.Fragment>
-      <section
-        className="contact-container w-full min-[1921px]:px-[55rem] mt-16"
-        id="contact"
+return (
+  <React.Fragment>
+    <section
+      className="contact-container w-full min-[1921px]:px-[55rem] mt-16"
+      id="contact"
+    >
+      <div
+        className="title-container flex flex-col gap-6 justify-center items-center py-16  max-lg:p-16"
+        ref={ref}
       >
-        <div
-          className="title-container flex flex-col gap-6 justify-center items-center py-16  max-lg:p-16"
-          ref={ref}
+        <motion.div
+          ref={animationReference}
+          style={{
+            scale: scaleProgess,
+            opacity: opacityProgess,
+            textAlign: "center",
+          }}
         >
-          <motion.div
-            ref={animationReference}
-            style={{
-              scale: scaleProgess,
-              opacity: opacityProgess,
-              textAlign: "center",
-            }}
-          >
-            <p className="text-[--black] mb-6">
-              <span className="text-[--orange]">&lt;</span>
-              {language === "DE" ? contactData.title.de : contactData.title.en}
-              <span className="text-[--orange]">/&gt;</span>
-            </p>
-            <h2 className="text-[--black] text-center">
-              {language === "DE"
-                ? contactData.description.de
-                : contactData.description.en}
-            </h2>
-          </motion.div>
-        </div>
-        <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
-          <form
-            className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
-            onSubmit={sendEmail}
-            autoComplete="off"
-          >
-            {contactData.inputfields.map((input, index) => (
-              <input
-                key={index}
-                type={input.type}
-                placeholder={
-                  language === "DE"
-                    ? `${input.placeholder.de}`
-                    : `${input.placeholder.en}`
-                }
-                name={input.name}
-                value={formData[input.name as keyof typeof formData]}
-                required
-                onChange={handleInputChange}
-                className={`${
-                  theme === "dark"
-                    ? "bg-[--blackblue] dark-mode-shadow "
-                    : "bg-[--icewhite] dark-shadow "
-                }`}
-              />
-            ))}
-            <textarea
-              rows={contactData.textarea.rows}
+          <p className="text-[--black] mb-6">
+            <span className="text-[--orange]">&lt;</span>
+            {language === "DE" ? contactData.title.de : contactData.title.en}
+            <span className="text-[--orange]">/&gt;</span>
+          </p>
+          <h2 className="text-[--black] text-center">
+            {language === "DE"
+              ? contactData.description.de
+              : contactData.description.en}
+          </h2>
+        </motion.div>
+      </div>
+
+      <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
+        <form
+          className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"
+          onSubmit={sendEmail}
+          autoComplete="off"
+        >
+          {contactData.inputfields.map((input, index) => (
+            <input
+              key={index}
+              type={input.type}
               placeholder={
                 language === "DE"
-                  ? `${contactData.textarea.placeholder.de}`
-                  : `${contactData.textarea.placeholder.en}`
+                  ? `${input.placeholder.de}`
+                  : `${input.placeholder.en}`
               }
-              name={contactData.textarea.name}
-              value={formData.message}
+              name={input.name}
+              value={formData[input.name as keyof typeof formData]}
+              required
               onChange={handleInputChange}
               className={`${
                 theme === "dark"
-                  ? "bg-[--blackblue] dark-mode-shadow"
-                  : "bg-[--icewhite] dark-shadow"
+                  ? "bg-[--blackblue] dark-mode-shadow "
+                  : "bg-[--icewhite] dark-shadow "
               }`}
             />
-            <Button
-              value={
-                language === "DE"
-                  ? `${contactData.button.value.de}`
-                  : `${contactData.button.value.en}`
-              }
-              iconSVG={contactData.icon}
-              buttoncolor={contactData.colors.main}
-              iconcolor={contactData.colors.icon}
-              type="submit"
-              elementType="input"
-            />
-            <ToastContainer
-              className="w-max text-3xl block p-3 max-lg:w-full "
-              position="bottom-center"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme={theme}
-            />
-          </form>
-        </div>
-      </section>
-    </React.Fragment>
-  );
+          ))}
+          <textarea
+            rows={contactData.textarea.rows}
+            placeholder={
+              language === "DE"
+                ? `${contactData.textarea.placeholder.de}`
+                : `${contactData.textarea.placeholder.en}`
+            }
+            name={contactData.textarea.name}
+            value={formData.message}
+            onChange={handleInputChange}
+            className={`${
+              theme === "dark"
+                ? "bg-[--blackblue] dark-mode-shadow"
+                : "bg-[--icewhite] dark-shadow"
+            }`}
+          />
+          <Button
+            value={
+              language === "DE"
+                ? `${contactData.button.value.de}`
+                : `${contactData.button.value.en}`
+            }
+            iconSVG={contactData.icon}
+            buttoncolor={contactData.colors.main}
+            iconcolor={contactData.colors.icon}
+            type="submit"
+            elementType="input"
+          />
+          <ToastContainer
+            className="w-max text-3xl block p-3 max-lg:w-full "
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme={theme}
+          />
+        </form>
+      </div>
+
+      {/* 🔗 Social Links */}
+      <div className="flex justify-center gap-10 text-4xl mt-4 pb-10">
+        <a
+          href="https://github.com/Maqsood-Ahmed110"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="hover:text-[#6e5494]"
+        >
+          <i className="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/maqsood-ahmed-77000628a"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="hover:text-[#0077b5]"
+        >
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:abromaqsood242@gmail.com"
+          aria-label="Email"
+          className="hover:text-red-500"
+        >
+          <i className="fas fa-envelope"></i>
+        </a>
+      </div>
+    </section>
+  </React.Fragment>
+);
+
 };
 
 export default Contact;

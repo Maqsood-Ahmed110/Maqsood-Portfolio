@@ -26,7 +26,7 @@ import webflowicon from "../../assets/icons/webflowicon.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
-import profilepicture from "../img/profile.png";
+
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
@@ -41,13 +41,13 @@ import spotifymockup from "../../assets/img/spotimockup.png";
 import jobportalmockup from "../../assets/img/jobportalmockup.png";
 export const headerIntroData = {
   title: {
-    de: "Hi, ich bin Qalandar Bux",
-    en: "Hi, I'm Qalandar Bux",
+    de: "Hi, ich bin Maqsood Ahmed",
+    en: "Hi, I'm Maqsood Ahmed",
   },
   subtitle: "Fullstack Developer ",
   description: {
-    de: "Ich bin Qalandar Bux, ein Fullstack-Entwickler mit dem Ziel, meine Karriere voranzutreiben und an inspirierenden Projekten teilzunehmen. Hier präsentiere ich meine Arbeiten und meine Leidenschaft für die Webentwicklung. Lassen Sie uns gemeinsam digitale Lösungen gestalten und die Zukunft formen!",
-    en: "I'm Qalandar Bux, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for web development. Let's shape digital solutions together and shape the future!",
+    de: "Ich bin Maqsood Ahmed, ein Fullstack-Entwickler mit dem Ziel, meine Karriere voranzutreiben und an inspirierenden Projekten teilzunehmen. Hier präsentiere ich meine Arbeiten und meine Leidenschaft für die Webentwicklung. Lassen Sie uns gemeinsam digitale Lösungen gestalten und die Zukunft formen!",
+    en: "I'm Maqsood Ahmed, a full-stack developer focused on growing my career and contributing to meaningful projects. This portfolio showcases my work and passion for web development. Let's build innovative digital solutions and shape the future together.",
   },
   buttons: [
     // {
@@ -69,16 +69,16 @@ export const headerIntroData = {
     //   color: "secondary-btn",
     // },
   ],
-  profilepicture: profilepicture,
+  profilepicture:"/maqsood.jpg",
 } as const;
 
 export const projectsData = [
   {
-    title: "Login",
+    title: "Login-System",
     description:
-      "Eine Login-App, die als Teil eines größeren Projekts entwickelt wurde. Sie ermöglicht Benutzern das sichere Einloggen mit individuellen Anmeldedaten. Die App wurde mit React entwickelt und bietet eine benutzerfreundliche Oberfläche sowie eine sichere Backend-Integration für die Authentifizierung.",
+      "Ein sicheres Login-System, das Benutzerregistrierung, Authentifizierung und Passwortverwaltung umfasst. Entwickelt mit React für das Frontend und einem robusten Backend zur sicheren Verarbeitung von Benutzerdaten. Dieses System sorgt für eine intuitive Benutzererfahrung und schützt Daten durch moderne Sicherheitsstandards.",
     description_EN:
-      "A login app developed as part of a larger project. It allows users to securely log in with individual credentials. The app was built with React and provides a user-friendly interface along with secure backend integration for authentication.",
+      "A secure login system featuring user registration, authentication, and password management. Built with React for the frontend and a robust backend for secure handling of user data. This system provides an intuitive user experience while safeguarding data with modern security standards.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -90,7 +90,7 @@ export const projectsData = [
       { name: "Trello", icon: trelloicon },
     ],
     image: Login,
-    githuburl: "https://github.com/Qalandar-Bux1/Login-form.git",
+    githuburl: "https://github.com/Maqsood-Ahmed110/Login-System",
     githubicon: FiGithub,
     colors: {
       main: "main-btn",
@@ -99,67 +99,67 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
-  {
-    title: "Spotify",
-    description:
-      "Eine Yoga- und Meditations-App, die es den Benutzern ermöglicht, ihre Entspannungsreise mit Musik und geführten Meditationen zu bereichern. Sie wurde mit React, MongoDB, Express und Node.js entwickelt. Als Gitmaster und Backend-Entwickler war ich für die Backend-Programmierung und die Datenbankmodellierung verantwortlich.",
-    description_EN:
-      "A yoga and meditation app that enriches users' relaxation journey with music and guided meditations. It was developed using React, MongoDB, Express, and Node.js. As a gitmaster and backend developer, I was responsible for backend programming and database modeling.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-    ],
-    image: spotifymockup,
-    githuburl:
-      "https://github.com/Qalandar-Bux1/spotify-clone.git",
-    githubicon: FiGithub,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#FFD5BD",
-    },
+ {
+  title: "Email Classification Web App",
+  description:
+    "Eine Webanwendung zur automatischen Klassifizierung von E-Mails in verschiedene Kategorien. Entwickelt mit modernen Technologien für ein effizientes Management und eine bessere Übersicht der E-Mail-Kommunikation. Ich war verantwortlich für die Implementierung der Klassifizierungslogik und das Design der Benutzeroberfläche.",
+  description_EN:
+    "A web application for automatic classification of emails into different categories. Developed with modern technologies to provide efficient management and better organization of email communication. I was responsible for implementing the classification logic and designing the user interface.",
+  technologies: [
+    { name: "Html", icon: htmlicon },
+    { name: "CSS", icon: cssicon },
+    { name: "JavaScript", icon: javascripticon },
+    { name: "React", icon: reacticon },
+    { name: "JWT & Bcrypt", icon: jwticon },
+    { name: "Axios", icon: axiosicon },
+    { name: "MongoDB", icon: mongodbicon },
+    { name: "Express", icon: expressiconwhite },
+    { name: "Node.js", icon: nodejsicon },
+    { name: "Figma", icon: figmaicon },
+    { name: "Render", icon: rendericon },
+  ],
+  image: spotifymockup,  // You can update this image if you have a new mockup for the Email app
+  githuburl: "https://github.com/Maqsood-Ahmed110/Email-classification-web-app",
+  githubicon: FiGithub,
+  colors: {
+    main: "main-btn",
+    second: "secondary-btn",
+    icon: "white",
+    projectcolor: "#FFD5BD",
   },
+},
+
   {
-    title: "Job Portal",
-    description:
-      "Ein Jobportal, das es Nutzern ermöglicht, Stellenangebote in verschiedenen Kategorien zu durchsuchen und sich zu bewerben. Die App wurde mit React, MongoDB, Express und Node.js entwickelt. Als Gitmaster war ich für die Backend-Verknüpfung und Datenbankmodellierung verantwortlich.",
-    description_EN:
-      "A job portal that allows users to browse job listings in various categories and apply for them. The app was developed using React, MongoDB, Express, and Node.js. As a gitmaster, I was responsible for connecting the backend and database modeling.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
-    ],
-    image: jobportalmockup,
-    githuburl: "https://github.com/Qalandar-Bux1/job-portal.git",
-    githubicon: FiGithub,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#E3964A",
-    },
+  title: "Pizza Order System",
+  description:
+    "Ein Pizza-Bestellsystem, das es Nutzern ermöglicht, Pizzas einfach online zu bestellen und den Bestellstatus zu verfolgen. Die App wurde mit React, MongoDB, Express und Node.js entwickelt. Ich war verantwortlich für die Backend-Integration und die Datenbankmodellierung.",
+  description_EN:
+    "A pizza order system that allows users to easily order pizzas online and track their order status. The app was developed using React, MongoDB, Express, and Node.js. I was responsible for backend integration and database modeling.",
+  technologies: [
+    { name: "Html", icon: htmlicon },
+    { name: "CSS", icon: cssicon },
+    { name: "JavaScript", icon: javascripticon },
+    { name: "React", icon: reacticon },
+    { name: "JWT & Bcrypt", icon: jwticon },
+    { name: "Axios", icon: axiosicon },
+    { name: "MongoDB", icon: mongodbicon },
+    { name: "Express", icon: expressiconwhite },
+    { name: "Node.js", icon: nodejsicon },
+    { name: "Figma", icon: figmaicon },
+    { name: "Render", icon: rendericon },
+    { name: "Trello", icon: trelloicon },
+  ],
+  image: jobportalmockup,  // Update this if you have a pizza system mockup image
+  githuburl: "https://github.com/Maqsood-Ahmed110/Pizza-Order-System",
+  githubicon: FiGithub,
+  colors: {
+    main: "main-btn",
+    second: "secondary-btn",
+    icon: "white",
+    projectcolor: "#E3964A",
   },
+},
+
 ] as const;
 
 export const liveTickerData = {
@@ -306,23 +306,23 @@ export const FooterLinks = [
 ] as const;
 
 export const sideBarRightMail = {
-  link: "mailto:qbux95381@gmail.com",
-  text: "qbux95381@gmail.com",
+  link: "mailto:abromaqsood242@gmail.com",
+  text: "abromaqsood242@gmail.com",
 } as const;
 
 export const sideBarLeftSocials = [
   {
-    link: "https://www.linkedin.com/in/qalandar-bux-260800288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    link: "https://www.linkedin.com/in/maqsood-ahmed-77000628a",
     icon: FiLinkedin,
     altimgname: "linkedin",
   },
   {
-    link: "https://github.com/Qalandar-Bux1",
+    link: "https://github.com/Maqsood-Ahmed110",
     icon: FiGithub,
     altimgname: "github",
   },
   {
-    link: "mailto:qbux95381@gmail.com",
+    link: "mailto:abromaqsood242@gmail.com",
     icon: FiMail,
     altimgname: "mail",
   },
